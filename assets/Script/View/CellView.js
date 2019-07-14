@@ -25,19 +25,31 @@ cc.Class({
         //this.model = null;
         this.isSelect = false;
     },
-    initWithModel: function(model){
+    getFrameFromAtlas: function(atlas) {
+        let frames = atlas.getSpriteFrames();
+        let len = frames.length - 1;
+        let ran = Math.round(Math.random() * len);
+        return frames[ran];
+
+    },
+    initWithModel: function(model, trashAtlas){
         this.model = model;
         var x = model.startX;
         var y = model.startY;
         this.node.x = CELL_WIDTH * (x - 0.5);
         this.node.y = CELL_HEIGHT * (y - 0.5);
+        /*
         var animation  = this.node.getComponent(cc.Animation);
         if (model.status == CELL_STATUS.COMMON){
             animation.stop();
         } 
         else{
             animation.play(model.status);
-        }
+        }*/
+        if (trashAtlas)
+            this.node.getComponent(cc.Sprite).spriteFrame = this.getFrameFromAtlas(trashAtlas);
+        else
+            trashAtlas.plawithyou();
     },
     // 执行移动动作
     updateView: function(){
@@ -60,8 +72,9 @@ cc.Class({
             }
             else if(cmd[i].action == "toDie"){
                 if(this.status == CELL_STATUS.BIRD){
+                    /*
                     let animation = this.node.getComponent(cc.Animation);
-                    animation.play("effect");
+                    animation.play("effect");*/
                     actionArray.push(cc.delayTime(ANITIME.BOMB_BIRD_DELAY));
                 }
                 var callFunc = cc.callFunc(function(){
@@ -88,7 +101,7 @@ cc.Class({
             curTime = cmd[i].playTime + cmd[i].keepTime;
         }
         /**
-         * 智障的引擎设计，一群SB
+         * 
          */
         if(actionArray.length == 1){
             this.node.runAction(actionArray[0]);
@@ -103,6 +116,7 @@ cc.Class({
 
     // },
     setSelect: function(flag){
+        return;
         var animation = this.node.getComponent(cc.Animation);
         var bg = this.node.getChildByName("select");
         if(flag == false && this.isSelect && this.model.status == CELL_STATUS.COMMON){
@@ -110,6 +124,7 @@ cc.Class({
             this.node.getComponent(cc.Sprite).spriteFrame = this.defaultFrame;
         }
         else if(flag && this.model.status == CELL_STATUS.COMMON){
+            console.log(this.node.getComponent(cc.Sprite));
             animation.play(CELL_STATUS.CLICK);
         }
         else if(flag && this.model.status == CELL_STATUS.BIRD){

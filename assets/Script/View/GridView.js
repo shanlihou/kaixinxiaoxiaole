@@ -27,13 +27,26 @@ cc.Class({
         audioUtils:{
             type: AudioUtils,
             default: null
+        },
+        trashAtlas: {
+            default: [],
+            type: [cc.SpriteAtlas]
+        },
+        trashGreyAtlas: {
+            default: [],
+            type: [cc.SpriteAtlas]
         }
-        
     },
 
 
     // use this for initialization
     onLoad: function () {
+        console.log(window.Global, window.Global.gameType);
+        if ('gameType' in window.Global)
+            this.gameType = window.Global.gameType;
+        else
+            this.gameType = 0;
+
         this.setListener();
         this.lastTouchPos = cc.Vec2(-1, -1);
         this.isCanMove = true;
@@ -41,6 +54,15 @@ cc.Class({
     },
     setController: function(controller){
         this.controller = controller;
+    },
+    getAtlas: function(type){
+        console.log(this.gameType);
+        if (window.Global.gameType == 0) {
+            return this.trashGreyAtlas[type];
+        }
+        else {
+            return this.trashAtlas[type];
+        }
     },
 
     initWithCellModels: function(cellsModels){
@@ -50,9 +72,10 @@ cc.Class({
             for(var j = 1;j<=9;j++){
                 var type = cellsModels[i][j].type;
                 var aniView = cc.instantiate(this.aniPre[type]);
+                aniView.getComponent(cc.Sprite);
                 aniView.parent = this.node;
                 var cellViewScript = aniView.getComponent("CellView");
-                cellViewScript.initWithModel(cellsModels[i][j]);
+                cellViewScript.initWithModel(cellsModels[i][j], this.getAtlas(type));
                 this.cellViews[i][j] = aniView;
             }
         }
@@ -116,7 +139,7 @@ cc.Class({
                 var aniView = cc.instantiate(this.aniPre[type]);
                 aniView.parent = this.node;
                 var cellViewScript = aniView.getComponent("CellView");
-                cellViewScript.initWithModel(model);
+                cellViewScript.initWithModel(model, this.getAtlas(type));
                 view = aniView;
             }
             // 如果已经存在

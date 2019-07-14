@@ -78,10 +78,11 @@ export default class GameModel {
         let colResult = checkWithDirection.call(this, x, y, [cc.v2(0, -1), cc.v2(0, 1)]);
         let result = [];
         let newCellStatus = "";
+        /*
         if (rowResult.length >= 5 || colResult.length >= 5) {
             newCellStatus = CELL_STATUS.BIRD;
-        }
-        else if (rowResult.length >= 3 && colResult.length >= 3) {
+        }*/
+        if (rowResult.length >= 3 && colResult.length >= 3) {
             newCellStatus = CELL_STATUS.WRAP;
         }
         else if (rowResult.length >= 4) {

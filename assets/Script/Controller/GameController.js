@@ -17,6 +17,10 @@ cc.Class({
         grid:{
             default: null,
             type: cc.Node
+        },
+        return:{
+            default: null,
+            type: cc.Node
         }
     },
 
@@ -34,6 +38,9 @@ cc.Class({
     },
     cleanCmd: function(){
         this.gameModel.cleanCmd();
+    },
+    onReturn: function() {
+        cc.director.loadScene("Login")
     }
 
     // called every frame, uncomment this function to activate update callback

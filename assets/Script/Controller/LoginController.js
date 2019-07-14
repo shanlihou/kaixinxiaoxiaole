@@ -37,6 +37,10 @@ cc.Class({
             type: cc.Button,
             default: null,
         },
+        hardButton: {
+            type: cc.Button,
+            default: null,
+        },
         worldSceneBGM:{
             type: cc.AudioClip,
             default: null,
@@ -46,6 +50,9 @@ cc.Class({
     // LIFE-CYCLE CALLBACKS:
 
     onLoad () {
+        window.Global = {
+            
+        }
         this.gameSceneBGMAudioId = cc.audioEngine.play(this.worldSceneBGM, true, 1);
     },
 
@@ -53,7 +60,30 @@ cc.Class({
 
     },
 
+    onHard: function(){
+        window.Global = {
+            gameType: 0
+        }
+        this.loadingBar.node.active = true;
+        this.loginButton.node.active = false;
+        this.loadingBar.progress = 0;
+        let backup = cc.loader.onProgress;
+        cc.loader.onProgress = function (count, amount) {
+            this.loadingBar.progress = count / amount;
+        }.bind(this);
+
+        cc.director.preloadScene("Game", function () {
+            cc.loader.onProgress = backup;
+            this.loadingBar.node.active = false;
+            this.loginButton.node.active = true;
+            cc.director.loadScene("Game");
+        }.bind(this));
+    },
+
     onLogin: function(){
+        window.Global = {
+            gameType: 1
+        }
         this.loadingBar.node.active = true;
         this.loginButton.node.active = false;
         this.loadingBar.progress = 0;
