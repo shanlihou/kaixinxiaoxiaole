@@ -41,12 +41,6 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
-        console.log(window.Global, window.Global.gameType);
-        if ('gameType' in window.Global)
-            this.gameType = window.Global.gameType;
-        else
-            this.gameType = 0;
-
         this.setListener();
         this.lastTouchPos = cc.Vec2(-1, -1);
         this.isCanMove = true;
@@ -57,6 +51,10 @@ cc.Class({
     },
     getAtlas: function(type){
         console.log(this.gameType);
+        if (!('Global' in window && 'gameType' in window.Global)){
+            return this.trashAtlas[type];
+        }
+
         if (window.Global.gameType == 0) {
             return this.trashGreyAtlas[type];
         }

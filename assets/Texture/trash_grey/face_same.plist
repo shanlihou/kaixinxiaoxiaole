@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>6 face.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{51,51}</string>
+                <key>spriteSourceSize</key>
+                <string>{51,51}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{51,51}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>6 face2.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{51,51}</string>
+                <key>spriteSourceSize</key>
+                <string>{51,51}</string>
+                <key>textureRect</key>
+                <string>{{54,1},{51,51}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+            <key>6 face3.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{51,51}</string>
+                <key>spriteSourceSize</key>
+                <string>{51,51}</string>
+                <key>textureRect</key>
+                <string>{{107,1},{51,51}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>3</integer>
+            <key>pixelFormat</key>
+            <string>RGBA8888</string>
+            <key>premultiplyAlpha</key>
+            <false/>
+            <key>realTextureFileName</key>
+            <string>face_same.png</string>
+            <key>size</key>
+            <string>{159,53}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:0ea25e9309dc5c028aafbd9fe323635a:4c0f339fb71afa2cfa9612bd75b736c4:e9aa56b139393f534aee807d947e2d35$</string>
+            <key>textureFileName</key>
+            <string>face_same.png</string>
+        </dict>
+    </dict>
+</plist>
