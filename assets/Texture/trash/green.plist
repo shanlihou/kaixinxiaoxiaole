@@ -34,7 +34,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>dry brokenflowerpot.png</key>
+            <key>glass.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -49,7 +49,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>dry brush.png</key>
+            <key>hat.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -64,7 +64,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>dry dirtyshirt.png</key>
+            <key>jacket.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -79,7 +79,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>dry injector.png</key>
+            <key>paperbag.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -94,7 +94,7 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>dry toiletpaper.png</key>
+            <key>plastic.png</key>
             <dict>
                 <key>aliases</key>
                 <array/>
@@ -109,276 +109,6 @@
                 <key>textureRotated</key>
                 <false/>
             </dict>
-            <key>drybox.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{51,51}</string>
-                <key>spriteSourceSize</key>
-                <string>{51,51}</string>
-                <key>textureRect</key>
-                <string>{{372,1},{51,51}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>glass.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{51,51}</string>
-                <key>spriteSourceSize</key>
-                <string>{51,51}</string>
-                <key>textureRect</key>
-                <string>{{425,1},{51,51}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>green bag.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{51,51}</string>
-                <key>spriteSourceSize</key>
-                <string>{51,51}</string>
-                <key>textureRect</key>
-                <string>{{1,1},{51,51}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>green basketball.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{51,51}</string>
-                <key>spriteSourceSize</key>
-                <string>{51,51}</string>
-                <key>textureRect</key>
-                <string>{{54,1},{51,51}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>green glass.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{51,51}</string>
-                <key>spriteSourceSize</key>
-                <string>{51,51}</string>
-                <key>textureRect</key>
-                <string>{{425,1},{51,51}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>green hat.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{51,51}</string>
-                <key>spriteSourceSize</key>
-                <string>{51,51}</string>
-                <key>textureRect</key>
-                <string>{{478,1},{51,51}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>green jacket.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{51,51}</string>
-                <key>spriteSourceSize</key>
-                <string>{51,51}</string>
-                <key>textureRect</key>
-                <string>{{531,1},{51,51}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>green paperbag.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{51,51}</string>
-                <key>spriteSourceSize</key>
-                <string>{51,51}</string>
-                <key>textureRect</key>
-                <string>{{584,1},{51,51}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>green plastic.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{51,51}</string>
-                <key>spriteSourceSize</key>
-                <string>{51,51}</string>
-                <key>textureRect</key>
-                <string>{{637,1},{51,51}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>green shoe.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{51,51}</string>
-                <key>spriteSourceSize</key>
-                <string>{51,51}</string>
-                <key>textureRect</key>
-                <string>{{690,1},{51,51}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>hat.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{51,51}</string>
-                <key>spriteSourceSize</key>
-                <string>{51,51}</string>
-                <key>textureRect</key>
-                <string>{{478,1},{51,51}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>jacket.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{51,51}</string>
-                <key>spriteSourceSize</key>
-                <string>{51,51}</string>
-                <key>textureRect</key>
-                <string>{{531,1},{51,51}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>paperbag.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{51,51}</string>
-                <key>spriteSourceSize</key>
-                <string>{51,51}</string>
-                <key>textureRect</key>
-                <string>{{584,1},{51,51}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>plastic.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{51,51}</string>
-                <key>spriteSourceSize</key>
-                <string>{51,51}</string>
-                <key>textureRect</key>
-                <string>{{637,1},{51,51}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>red battery.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{51,51}</string>
-                <key>spriteSourceSize</key>
-                <string>{51,51}</string>
-                <key>textureRect</key>
-                <string>{{743,1},{51,51}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>red cdroom.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{51,51}</string>
-                <key>spriteSourceSize</key>
-                <string>{51,51}</string>
-                <key>textureRect</key>
-                <string>{{796,1},{51,51}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>red light.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{51,51}</string>
-                <key>spriteSourceSize</key>
-                <string>{51,51}</string>
-                <key>textureRect</key>
-                <string>{{849,1},{51,51}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>red temperature.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{51,51}</string>
-                <key>spriteSourceSize</key>
-                <string>{51,51}</string>
-                <key>textureRect</key>
-                <string>{{902,1},{51,51}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
             <key>shoe.png</key>
             <dict>
                 <key>aliases</key>
@@ -390,97 +120,7 @@
                 <key>spriteSourceSize</key>
                 <string>{51,51}</string>
                 <key>textureRect</key>
-                <string>{{690,1},{51,51}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>wet donut.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{51,51}</string>
-                <key>spriteSourceSize</key>
-                <string>{51,51}</string>
-                <key>textureRect</key>
-                <string>{{955,1},{51,51}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>wet eggplant.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{51,51}</string>
-                <key>spriteSourceSize</key>
-                <string>{51,51}</string>
-                <key>textureRect</key>
-                <string>{{1008,1},{51,51}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>wet leaf.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{51,51}</string>
-                <key>spriteSourceSize</key>
-                <string>{51,51}</string>
-                <key>textureRect</key>
-                <string>{{1061,1},{51,51}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>wet plant.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{51,51}</string>
-                <key>spriteSourceSize</key>
-                <string>{51,51}</string>
-                <key>textureRect</key>
-                <string>{{1114,1},{51,51}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>wet shrimp.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{51,51}</string>
-                <key>spriteSourceSize</key>
-                <string>{51,51}</string>
-                <key>textureRect</key>
-                <string>{{1167,1},{51,51}}</string>
-                <key>textureRotated</key>
-                <false/>
-            </dict>
-            <key>wet watermelon.png</key>
-            <dict>
-                <key>aliases</key>
-                <array/>
-                <key>spriteOffset</key>
-                <string>{0,0}</string>
-                <key>spriteSize</key>
-                <string>{51,51}</string>
-                <key>spriteSourceSize</key>
-                <string>{51,51}</string>
-                <key>textureRect</key>
-                <string>{{1220,1},{51,51}}</string>
+                <string>{{372,1},{51,51}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -496,9 +136,9 @@
             <key>realTextureFileName</key>
             <string>green.png</string>
             <key>size</key>
-            <string>{1272,53}</string>
+            <string>{424,53}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:515904278b3431f56efd373a05a9e04d:cf4b072f755da33fbe1d8d6bfcb8b6b2:fe7b68023e9ad66bc8aef9f54e75db3f$</string>
+            <string>$TexturePacker:SmartUpdate:d88acabda22aeb6552a9bc722dd9e7ac:1de3c0e0b638cd448ae8d0cf05ed46e5:fe7b68023e9ad66bc8aef9f54e75db3f$</string>
             <key>textureFileName</key>
             <string>green.png</string>
         </dict>
