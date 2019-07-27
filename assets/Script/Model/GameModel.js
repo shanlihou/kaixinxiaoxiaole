@@ -144,9 +144,7 @@ export default class GameModel {
         this.pushToChangeModels(curClickCell);
         this.pushToChangeModels(lastClickCell);
         let isCanBomb = (curClickCell.status != CELL_STATUS.COMMON && // 判断两个是否是特殊的动物
-            lastClickCell.status != CELL_STATUS.COMMON) ||
-            curClickCell.status == CELL_STATUS.BIRD ||
-            lastClickCell.status == CELL_STATUS.BIRD;
+            lastClickCell.status != CELL_STATUS.COMMON);
         if (result1.length < 3 && result2.length < 3 && !isCanBomb) {//不会发生消除的情况
             this.exchangeCell(lastPos, pos);
             curClickCell.moveToAndBack(lastPos);
