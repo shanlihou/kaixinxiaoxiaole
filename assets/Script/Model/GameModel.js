@@ -1,4 +1,5 @@
 import CellModel from "./CellModel";
+import ScoreModel from "./ScoreModel"
 import { CELL_TYPE, CELL_BASENUM, CELL_STATUS, GRID_WIDTH, GRID_HEIGHT, ANITIME } from "./ConstValue";
 
 export default class GameModel {
@@ -10,7 +11,8 @@ export default class GameModel {
         this.cellCreateType = []; // 升成种类只在这个数组里面查找
     }
 
-    init(cellTypeNum) {
+    init(cellTypeNum, scoreModel) {
+        this._scoreModel = scoreModel;
         this.cells = [];
         this.setCellTypeNum(cellTypeNum || this.cellTypeNum);
         for (var i = 1; i <= GRID_WIDTH; i++) {
@@ -91,7 +93,7 @@ export default class GameModel {
         else if (colResult.length >= 4) {
             newCellStatus = CELL_STATUS.COLUMN;
         }
-        if (rowResult.length >= 3) {
+        if (rowResult.length >= 3) {//这个和下个判断合在一起是把横竖都超过三个的一起放在result里面
             result = rowResult;
         }
         if (colResult.length >= 3) {
@@ -167,24 +169,6 @@ export default class GameModel {
         let cycleCount = 0;
         while (checkPoint.length > 0) {
             let bombModels = [];
-            if (cycleCount == 0 && checkPoint.length == 2) { //特殊消除
-                let pos1 = checkPoint[0];
-                let pos2 = checkPoint[1];
-                let model1 = this.cells[pos1.y][pos1.x];
-                let model2 = this.cells[pos2.y][pos2.x];
-                if (model1.status == CELL_STATUS.BIRD || model2.status == CELL_STATUS.BIRD) {
-                    let bombModel = null;
-                    if (model1.status == CELL_STATUS.BIRD) {
-                        model1.type = model2.type;
-                        bombModels.push(model1);
-                    }
-                    else {
-                        model2.type = model1.type;
-                        bombModels.push(model2);
-                    }
-
-                }
-            }
             for (var i in checkPoint) {
                 var pos = checkPoint[i];
                 if (!this.cells[pos.y][pos.x]) {
@@ -195,6 +179,7 @@ export default class GameModel {
                 if (result.length < 3) {
                     continue;
                 }
+                this._scoreModel.onBomb(newCellStatus, this.curTime);
                 for (var j in result) {
                     var model = this.cells[result[j].y][result[j].x];
                     this.crushCell(result[j].x, result[j].y, false, cycleCount);

@@ -230,6 +230,7 @@ cc.Class({
         var result = this.controller.selectCell(cellPos); // 直接先丢给model处理数据逻辑
         var changeModels = result[0]; // 有改变的cell，包含新生成的cell和生成马上摧毁的格子
         var effectsQueue = result[1]; //各种特效
+        console.log('effect:', effectsQueue);
         this.playEffect(effectsQueue);
         this.disableTouch(this.getPlayAniTime(changeModels), this.getStep(effectsQueue));
         this.updateView(changeModels);

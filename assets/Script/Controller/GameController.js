@@ -1,5 +1,5 @@
 import GameModel from "../Model/GameModel";
-
+import ScoreModel from "../Model/ScoreModel";
 cc.Class({
     extends: cc.Component,
 
@@ -21,16 +21,29 @@ cc.Class({
         return:{
             default: null,
             type: cc.Node
+        },
+        scoreLabel: {
+            default: null,
+            type: cc.Label
         }
     },
 
     // use this for initialization
     onLoad: function () {
         this.gameModel = new GameModel();
-        this.gameModel.init(6);
-        var gridScript = this.grid.getComponent("GridView");
+        let scoreModel = new ScoreModel();
+        this.gameModel.init(6, scoreModel);
+        let scoreView = this.scoreLabel.getComponent("ScoreView");
+        scoreModel.init(scoreView);
+        let gridScript = this.grid.getComponent("GridView");
         gridScript.setController(this);
         gridScript.initWithCellModels(this.gameModel.getCells());
+
+        let gm = this.node.getComponent("GmView");
+        gm.attach(this, this.onGm);
+    },
+    onGm: (str)=>{
+        console.log("on gm:", str);
     },
 
     selectCell: function(pos){

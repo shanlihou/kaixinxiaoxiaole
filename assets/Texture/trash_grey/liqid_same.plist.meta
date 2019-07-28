@@ -9,7 +9,7 @@
   "type": "Texture Packer",
   "subMetas": {
     "5 liquid.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "d106747e-104e-4c1f-85a5-bf87ff744720",
       "rawTextureUuid": "f93ebfb1-9b40-4f7d-8b65-75cd11734c7a",
       "trimType": "auto",
@@ -31,7 +31,7 @@
       "subMetas": {}
     },
     "5 liquid2.png": {
-      "ver": "1.0.3",
+      "ver": "1.0.4",
       "uuid": "16efec23-ca3e-43cb-a084-74be2ca3fd48",
       "rawTextureUuid": "f93ebfb1-9b40-4f7d-8b65-75cd11734c7a",
       "trimType": "auto",
