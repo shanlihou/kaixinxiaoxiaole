@@ -9,6 +9,7 @@ export default class GameModel {
         this.lastPos = cc.v2(-1, -1);
         this.cellTypeNum = 5;
         this.cellCreateType = []; // 升成种类只在这个数组里面查找
+        this.gmMod = false;
     }
 
     init(cellTypeNum, scoreModel) {
@@ -37,7 +38,18 @@ export default class GameModel {
                 }
             }
         }
+        
+        let gameScene = cc.find("Canvas/GameScene");
+        let gm = gameScene.getComponent("GmView");
+        if (gm) {
+            gm.attach(this, this.onGm);
+        }
+    }
 
+    onGm(gmStr) {
+        if (gmStr == 'gmMod') {
+            this.gmMod = !this.gmMod;
+        }
     }
 
     initWithData(data) {
@@ -110,6 +122,7 @@ export default class GameModel {
                 }
             }, this);
         }
+        console.log('result:', newCellStatus, result);
         return [result, newCellStatus, this.cells[y][x].type];
     }
 
@@ -148,11 +161,18 @@ export default class GameModel {
         let isCanBomb = (curClickCell.status != CELL_STATUS.COMMON && // 判断两个是否是特殊的动物
             lastClickCell.status != CELL_STATUS.COMMON);
         if (result1.length < 3 && result2.length < 3 && !isCanBomb) {//不会发生消除的情况
-            this.exchangeCell(lastPos, pos);
-            curClickCell.moveToAndBack(lastPos);
-            lastClickCell.moveToAndBack(pos);
-            this.lastPos = cc.v2(-1, -1);
-            return [this.changeModels];
+            if (this.gmMod) {
+                curClickCell.moveTo(lastPos, this.curTime);
+                lastClickCell.moveTo(pos, this.curTime);
+                return [this.changeModels];
+            }
+            else {
+                this.exchangeCell(lastPos, pos);
+                curClickCell.moveToAndBack(lastPos);
+                lastClickCell.moveToAndBack(pos);
+                this.lastPos = cc.v2(-1, -1);
+                return [this.changeModels];
+            }
         }
         else {
             this.lastPos = cc.v2(-1, -1);
@@ -187,7 +207,8 @@ export default class GameModel {
                         bombModels.push(model);
                     }
                 }
-                this.createNewCell(pos, newCellStatus, newCellType);
+                console.log('create cell:', pos, newCellStatus, newCellType);
+                //this.createNewCell(pos, newCellStatus, newCellType);
 
             }
             this.processBomb(bombModels, cycleCount);
